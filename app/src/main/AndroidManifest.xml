@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.miind">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MiindApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginRolesActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".DashboardActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RecordQueryActivity"
+            android:configChanges="orientation"
+            android:label="Record a query"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ScheduledQueryIistActivity"
+            android:configChanges="orientation"
+            android:label="Scheduled Queries"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ScheduledQueryDetailsActivity"
+            android:configChanges="orientation"
+            android:label="Query Details"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ScheduledQueryIistActivity" />
+        </activity>
+        <activity
+            android:name=".ResolvedQueryList"
+            android:configChanges="orientation"
+            android:label="Resolved Queries"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".QueryHistoryActivity"
+            android:configChanges="orientation"
+            android:label="Queries History"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ResolvedQueryDetailsActivity"
+            android:configChanges="orientation"
+            android:label="Query Details"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ResolvedQueryList" />
+        </activity>
+        <activity
+            android:name=".QueryHistoryDetailsActivity"
+            android:configChanges="orientation"
+            android:label="Query Details"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".QueryHistoryActivity" />
+        </activity>
+        <activity
+            android:name=".LiveResolutionActivity"
+            android:configChanges="orientation"
+            android:label="Live Resolution"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ScheduledQueryDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:label="Video"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ScheduledQueryDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".RatingActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:label="Rating"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ResolvedQueryDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".ChatActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:label="Chat History"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".QueryHistoryDetailsActivity" />
+        </activity>
+
+        <activity android:name=".PaypalActivity"
+            android:configChanges="orientation"
+            android:keepScreenOn="true"
+            android:label="Wallet"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- Paypal Activities -->
+
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+
+    </application>
+
+</manifest>

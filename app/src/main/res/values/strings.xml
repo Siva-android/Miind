@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Miind</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in </string>
+    <string name="action_register_new">Register new</string>
+    <string name="action_forgot_password">Forgot password ?</string>
+    <string name="faq">FAQ\'s</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <string name="category_prompt"></string>
+
+    <string-array name="categories">
+        <item>Choose a category</item>
+        <item>Inspection</item>
+        <item>Machining calculation</item>
+        <item>Machining  VMC/HMc</item>
+        <item>CNC Programming</item>
+        <item>Toolings</item>
+        <item>Fixing/ Work handling</item>
+        <item>EDM/ wire cutting</item>
+        <item>Heat treatment</item>
+        <item>Metallurgy</item>
+        <item>Surface treatment </item>
+    </string-array>
+
+</resources>
